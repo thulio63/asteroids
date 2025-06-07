@@ -37,8 +37,8 @@ def main():
                 sys.exit()
         for a in asteroids: # checks for shot asteroids
             for s in shots:
-                if a.collision(s) or s.collision(a):
-                    a.kill()
+                if a.collision(s):
+                    a.split()
                     s.kill()
         for obj in drawable: # draws objects
             obj.draw(screen)
